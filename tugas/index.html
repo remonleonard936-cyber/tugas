@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Akademik | RPL SMKN 9</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengimpor Supabase JS dari CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2 id="form-title">Login Portal</h2>
+
+        <form id="auth-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+            </div>
+
+            <div class="role-selection">
+                <p>Masuk sebagai:</p>
+                <label>
+                    <input type="radio" name="role" value="siswa" checked> Siswa
+                </label>
+                <label>
+                    <input type="radio" name="role" value="guru"> Guru
+                </label>
+            </div>
+
+            <button type="submit" id="submit-btn">Login</button>
+        </form>
+
+        <p class="toggle-text">
+            Belum punya akun? <a href="#" id="toggle-mode">Buat Akun di sini</a>
+        </p>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
